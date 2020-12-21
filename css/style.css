@@ -134,10 +134,10 @@ li{
   font-size: 22px;
 }
 .container-check .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 5px;
+  bottom: 5px;
+  width: 15px;
+  height: 30px;
   border: solid #000;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
