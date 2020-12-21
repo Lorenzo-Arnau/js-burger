@@ -6,51 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <!-- Creo header con nome applicazione e logo a destra -->
       <header class="clearfix">
         <div class="fl">
-          ciao
+          <h1>Create Your Burger</h1>
         </div>
         <div class="fr">
-          ciao
+
+          <img src="img/burger.png" alt="">
         </div>
       </header>
       <!-- creo main con input per il nome dell'hambuerger obbligatorio -->
       <main>
-        <div class="">
-          <input id="nome-hamburger" type="text" name="" value="" placeholder="Inserire nome" required>
+        <div class="input-nome">
+          <input id="nome-hamburger" type="text" name="" value="" placeholder="Name Your Burger" required>
         </div>
       <!-- creo la sezione ingredienti con due liste affiancate -->
+      <h2>Ingredients</h2>
       <div class="liste">
         <ul class="fl lista-uno">
-          <li>img ciao <input type="checkbox" name="cheese" value="5"> <label for="cheese">Cheese</label></li>
-          <li>img ciao <input type="checkbox" name="egg" value="5"> <label for="egg">Egg</label></li>
-          <li>img ciao <input type="checkbox" name="mustard" value="5"> <label for="mustard">Mustard</label></li>
+          <li>img Cheese <input class="ingredient" type="checkbox" name="cheese" value="5"> <label for="cheese">add</label></li>
+          <li>img Egg <input class="ingredient" type="checkbox" name="egg" value="5"> <label for="egg">add</label></li>
+          <li>img Mustard <input class="ingredient" type="checkbox" name="mustard" value="5"> <label for="mustard">add</label></li>
         </ul>
         <ul class="fl lista-due">
-          <li>img ciao <input type="checkbox" name="tomato" value="5"> <label for="tomato">Tomatoes</label></li>
-          <li>img ciao <input type="checkbox" name="lettuce" value="5"> <label for="lettuce">Lettuce</label></li>
-          <li>img ciao <input type="checkbox" name="ketchup" value="5"> <label for="ketchup">Ketchup</label></li>
+          <li>img Tomatoes <input class="ingredient" type="checkbox" name="tomato" value="5"> <label for="tomato">add</label></li>
+          <li>img Lettuce <input class="ingredient" type="checkbox" name="lettuce" value="5"> <label for="lettuce">add</label></li>
+          <li>img Ketchup <input class="ingredient" type="checkbox" name="ketchup" value="5"> <label for="ketchup">add</label></li>
         </ul>
       </div>
       <!-- creo la senzione input del cupon -->
-      <div class="">
-        <label for="cupon">Cupon</label>
+      <div class="cupon-input">
+        <label for="cupon">Discount Cupon </label>
         <input id="cupon" type="text" name="cupon" value="" placeholder="123456789">
       </div>
       <!-- creo il tasto per calcolare il prezzo finale -->
-      <button type="button" name="button">Calcola</button>
+      <div class="button-container">
+        <button type="button" name="button">Calculate</button>
+      </div>
     </main>
       <!-- creo il footer con il totale e un div che riporterà il totale js -->
       <footer class="clearfix">
         <div class="fl">
-          TOTALE
+          Your Price
         </div>
         <div class="fr costo-totale">
-          50
+          $ 50
         </div>
 
       </footer>

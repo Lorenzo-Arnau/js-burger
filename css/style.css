@@ -3,12 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 .container{
   width: 100%;
+  height: 100vh;
   min-width: 1200px;
   margin: 0 auto;
   position: relative;
+  background-color: #FFF5E2;
 }
 .fl{
   float: left;
@@ -24,26 +27,94 @@
 /* reset e utility class */
 header,main,footer{
   width: 50%;
-  height: 100px;
   margin: auto;
 }
-main{
-  background-color: violet;
-  height: 500px;
-}
 header{
-  background-color: pink;
+  background-color: #FDBB40;
+}
+main{
+  background-color: #fff;
+  height: 700px;
+}
+header .fr{
+  position: relative;
+}
+header h1,.input-nome,.lista-uno,.lista-due,.cupon-input,footer div{
+  padding: 30px 15px 20px 25px;
+}
+header img{
+  height: 150px;
+  vertical-align: top;
+  text-align: right;
+  right: 0px;
+  position: absolute;
+  background-color: #FDBB40;
+  padding: 10px;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+h2{
+  font-size: 1.8em;
+  padding-left: 25px;
+  font-weight: normal;
+}
+.input-nome input{
+  width: 400px;
+  height: 45px;
+  border: none;
+  font-size: 35px;
+  color: #757575;
 }
 footer{
-  background-color: darkgreen;
+  background-color: #D33359;
+  color: #fff;
+}
+.liste label{
+  color: #D33359;
 }
 li{
   list-style: none;
+  font-size: 25px;
+  margin-top: 15px;
 }
 .liste{
   width: 100%;
   height: 200px;
 }
 .lista-due{
-  margin-left: 50px;
+  margin-left: 200px;
+}
+.cupon-input label{
+  font-size: 20px;
+  padding: 10px;
+}
+.cupon-input input{
+  font-size: 20px;
+  width: 80%;
+  border: none;
+  border-radius: 4px;
+  height: 30px;
+  color: #757575;
+  background-color: #FFF5E2;
+}
+ input:focus{
+    outline: none;
+}
+.button-container{
+  margin: auto;
+  height: 55px;
+  width: 140px;
+}
+button{
+  height: 100%;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 15px;
+  background-color: #FDBB40;
+}
+footer div{
+  font-weight: bolder;
+  font-size: 30px;
 }
