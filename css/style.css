@@ -92,6 +92,7 @@ li{
   vertical-align: middle;
   text-align: center;
   display: inline-block;
+  margin-right: 10px;
 }
 .img-cont img{
   height: 45px;
@@ -108,28 +109,47 @@ li{
 .lista-due li:last-child .img-cont{
   background-color: #EAA7F4;
 }
-.ingredient::after{
-  content: '';
-  width: 15px;
-  height: 15px;
-  background-color: red;
+.checkmark {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  height: 25px;
+  width: 25px;
+  background-color: #D33359;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.ingredient:checked ~ .checkmark:after {
   display: block;
+}
+.container-check{
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
   cursor: pointer;
+  font-size: 22px;
 }
-.ingredient::before{
-    content: "\f00c";
-    font-size: 18px;
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    position: absolute;
-    display: none;
-    cursor: pointer;
+.container-check .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
-.ingredient:active ~ .ingredient::before{
-  display: block;
+.ingredient{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 .lista-due{
   margin-left: 200px;
