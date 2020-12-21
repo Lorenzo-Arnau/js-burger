@@ -2,13 +2,13 @@ var nomeHamburger = document.getElementById('nome-hamburger');
 var listeIngredienti = document.getElementsByClassName('liste')[0].getElementsByTagName('input');
 var cupon = document.getElementById('cupon');
 var go = document.getElementsByTagName('button')[0];
-var total =document.getElementsByClassName('costo-totale')[0];
+var total =document.getElementById('prezzo-finale');
 var totaleSelezionato = 0;
 go.addEventListener('click',function() {
 // ----------------------------------------------------------------------------------------------------
   // dobbiamo far si che il nome sia obbligatorio,in caso la stinga dell'input sia vuota Alert()
   if (nomeHamburger.value == '') {
-    alert('Inserire')
+    alert('Inserisci un nome per il tuo Hamburger')
   }
 // ----------------------------------------------------------------------------------------------------
   // dobbiamo far si che l'utente selezioni almeno due ingredienti,attribuire un valore a ogni ingrediente che serviranno poi per la somma del totale
@@ -25,7 +25,7 @@ go.addEventListener('click',function() {
   }
 
   if (flag < 2) {
-    alert('scegli');
+    alert('scegli almeno due ingredienti,altrimenti non sa di niente!');
   }
 // ----------------------------------------------------------------------------------------------------
 // devo creare un array di stringhe contenenti coupon,se quello che inserisce l'utente è tra questi sconto secco del 20%
