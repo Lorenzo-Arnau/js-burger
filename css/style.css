@@ -1,0 +1,49 @@
+/* reset e utility class */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  width: 100%;
+  min-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix{
+  content: "";
+  display: table;
+  clear: both;
+}
+/* reset e utility class */
+header,main,footer{
+  width: 50%;
+  height: 100px;
+  margin: auto;
+}
+main{
+  background-color: violet;
+  height: 500px;
+}
+header{
+  background-color: pink;
+}
+footer{
+  background-color: darkgreen;
+}
+li{
+  list-style: none;
+}
+.liste{
+  width: 100%;
+  height: 200px;
+}
+.lista-due{
+  margin-left: 50px;
+}

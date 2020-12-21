@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create your Burger!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Creo header con nome applicazione e logo a destra -->
+      <header class="clearfix">
+        <div class="fl">
+          ciao
+        </div>
+        <div class="fr">
+          ciao
+        </div>
+      </header>
+      <!-- creo main con input per il nome dell'hambuerger obbligatorio -->
+      <main>
+        <div class="">
+          <input id="nome-hamburger" type="text" name="" value="" placeholder="Inserire nome" required>
+        </div>
+      <!-- creo la sezione ingredienti con due liste affiancate -->
+      <div class="liste">
+        <ul class="fl lista-uno">
+          <li>img ciao <input type="checkbox" name="cheese" value="5"> <label for="cheese">Cheese</label></li>
+          <li>img ciao <input type="checkbox" name="egg" value="5"> <label for="egg">Egg</label></li>
+          <li>img ciao <input type="checkbox" name="mustard" value="5"> <label for="mustard">Mustard</label></li>
+        </ul>
+        <ul class="fl lista-due">
+          <li>img ciao <input type="checkbox" name="tomato" value="5"> <label for="tomato">Tomatoes</label></li>
+          <li>img ciao <input type="checkbox" name="lettuce" value="5"> <label for="lettuce">Lettuce</label></li>
+          <li>img ciao <input type="checkbox" name="ketchup" value="5"> <label for="ketchup">Ketchup</label></li>
+        </ul>
+      </div>
+      <!-- creo la senzione input del cupon -->
+      <div class="">
+        <label for="cupon">Cupon</label>
+        <input id="cupon" type="text" name="cupon" value="" placeholder="123456789">
+      </div>
+      <!-- creo il tasto per calcolare il prezzo finale -->
+      <button type="button" name="button">Calcola</button>
+    </main>
+      <!-- creo il footer con il totale e un div che riporterà il totale js -->
+      <footer class="clearfix">
+        <div class="fl">
+          TOTALE
+        </div>
+        <div class="fr costo-totale">
+          50
+        </div>
+
+      </footer>
+    </div>
+  <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
