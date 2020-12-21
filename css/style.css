@@ -47,7 +47,7 @@ header .fr{
   top: -10px;
 }
 header img{
-  height: 150px;
+  height: 200px;
   vertical-align: top;
   text-align: right;
   border-radius: 50%;
@@ -107,6 +107,26 @@ li{
 }
 .lista-due li:last-child .img-cont{
   background-color: #EAA7F4;
+}
+.ingredient::after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  display: block;
+}
+.ingredient::before{
+    content: "\f00c";
+    font-size: 18px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    display: none;
+}
+.ingredient:checked .ingredient::before{
+  display: block;
 }
 .lista-due{
   margin-left: 200px;
