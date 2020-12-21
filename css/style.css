@@ -114,6 +114,7 @@ li{
   height: 15px;
   background-color: red;
   display: block;
+  cursor: pointer;
 }
 .ingredient::before{
     content: "\f00c";
@@ -124,8 +125,10 @@ li{
     text-decoration: inherit;
     position: absolute;
     display: none;
+    cursor: pointer;
 }
-.ingredient:checked .ingredient::before{
+
+.ingredient:active ~ .ingredient::before{
   display: block;
 }
 .lista-due{
