@@ -17,6 +17,7 @@ go.addEventListener('click',function() {
   // dobbiamo far si che il nome sia obbligatorio,in caso la stinga dell'input sia vuota Alert()
   if (nomeHamburger.value == '') {
     alert('Inserisci un nome per il tuo Hamburger')
+    total.innerText ='0';
   }else if(nomeHamburger.value != ''){
 // ----------------------------------------------------------------------------------------------------
     // dobbiamo far si che l'utente selezioni almeno due ingredienti,attribuire un valore a ogni ingrediente che serviranno poi per la somma del totale
@@ -63,4 +64,5 @@ go.addEventListener('click',function() {
   //creo un pulsante di pagamento
   paymentButton.addEventListener('click',function() {
     alert('Reindirizzamento alla pagina di pagamento in corso');
+    location.href = "payment/payment.html";
   });
