@@ -2,6 +2,7 @@
 <html lang="zxx" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="img/burger.png">
     <title>Create your Burger!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,6 +27,7 @@
           <input id="nome-hamburger" type="text" name="" value="" placeholder="Name Your Burger" required>
         </div>
       <!-- creo la sezione ingredienti con due liste affiancate -->
+
       <h2>Ingredients</h2>
       <div class="liste flexbox">
         <ul class="lista-uno">
@@ -42,7 +44,7 @@
       <!-- creo la senzione input del cupon -->
       <div class="cupon-input">
         <label for="cupon">Discount Cupon </label>
-        <input id="cupon" type="text" name="cupon" value="" placeholder="123456789">
+        <input id="cupon" type="text" name="cupon" value="" placeholder="12354ABCDEF">
       </div>
       <!-- creo il tasto per calcolare il prezzo finale -->
       <div class="button-container">
@@ -50,16 +52,20 @@
       </div>
     </main>
       <!-- creo il footer con il totale e un div che riporterà il totale js -->
-      <footer class="clearfix">
-        <div class="fl">
+      <footer class="flexbox">
+        <div class="">
           Your Price
         </div>
-        <div class="fr costo-totale">
+        <div class="">
+          <button id="payment" type="button" name="button"><a href="payment/payment.html">Clicca qui per procedere all'ordine</a></button>
+        </div>
+        <div class=" costo-totale">
           $ <span id="prezzo-finale"></span>
         </div>
 
       </footer>
     </div>
+
   <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="../img/burger.png">
+  <title>Create your Burger!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="payment.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Creo header con nome applicazione e logo a destra -->
+    <header class="clearfix">
+      <div class="fl">
+        <h1>Create Your Burger</h1>
+      </div>
+      <div class="fr">
+        <img src="../img/burger.png" alt="">
+      </div>
+    </header>
+    <!-- creo main con input per il nome dell'hambuerger obbligatorio -->
+    <main>
+      <div class="payment-section">
+        <div class="">
+          <label for="card">Carta di credito <img src="../img/visa.png" alt=""><img src="../img/mastercard.png" alt=""><img src="../img/paypal.png" alt=""> </label>
+          <input id="card" type="text" name="" value="" placeholder="xxx xxx xxx xxx xxxx">
+          <label for="name">Nome</label>
+          <input id="name" type="text" name="" value="" placeholder="Your name">
+          <label for="cognome">Cognome</label>
+          <input id="cognome" type="text" name="" value="" placeholder="Your surname">
+          <label for="indirizzo">Indirizzo completo</label>
+          <input id="indirizzo" type="text" name="" value="" placeholder="Address">
+        </div>
+      </div>
+  </main>
+    <!-- creo il footer con il totale e un div che riporterà il totale js -->
+    <footer class="flexbox">
+
+        <button id="acquista" type="button" name="button">Termina e Buon appetito!</button>
+
+    </footer>
+  </div>
+<script src="payment.js" charset="utf-8"></script>
+</body>
+</html>

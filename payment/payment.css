@@ -1,0 +1,122 @@
+/* reset e utility class */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #FFF5E2;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix{
+  content: "";
+  display: table;
+  clear: both;
+}
+.flexbox{
+  display: flex;
+}
+/* reset e utility class */
+header,main,footer{
+  width: 50%;
+  margin: auto;
+}
+header{
+  background-color: #FDBB40;
+  position: relative;
+  height: 100px;
+}
+/* TODO: ristabilire il main */
+main{
+  background-color: #fff;
+  min-height: calc(100vh - 200px);
+}
+header h1,.input-nome,.lista-uno,.lista-due,footer div{
+  padding: 30px 15px 20px 25px;
+}
+header .fr{
+  position: absolute;
+  right: -50px;
+  top: -10px;
+  z-index: 5;
+}
+header img{
+  height: 200px;
+  vertical-align: top;
+  text-align: right;
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #FDBB40;
+}
+label::placeholder{
+
+}
+.payment-section{
+  width:100%;
+  margin: auto;
+  background-color: #fff;
+  min-height: calc(100vh - 200px);
+  position: relative;
+}
+.payment-section div{
+  padding: 50px 25px;
+  font-size: 25px;
+  font-weight: bolder;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.payment-section div img{
+  height: 50px;
+  background-color: #fff;
+  vertical-align: middle;
+  border: none;
+}
+
+.payment-section input{
+  display:block;
+  height: 45px;
+  margin-bottom: 20px;
+  width: 350px;
+  font-size: 25px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #000;
+  text-align: center;
+}
+.button-container{
+  margin: auto;
+  height: 55px;
+  width: 140px;
+}
+button{
+  height: 100%;
+  width: 30%;
+  margin: auto;
+  font-weight: bolder;
+  font-size: 1.3em;
+  border: none;
+  border-radius: 15px;
+  background-color: #FDBB40;
+  cursor: pointer;
+}
+footer{
+  background-color: #D33359;
+  color: #fff;
+  height: 100px;
+}
+ input:focus,button:focus{
+    outline: none;
+}
