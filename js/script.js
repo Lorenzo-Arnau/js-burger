@@ -2,6 +2,7 @@
 var prezzoBase=50;
 var scontoPrecentuale=20;
 var listaCoupon = ['MARTEDI20','LUNEDI20','MERCOLEDI20'];
+var totaleSelezionato = 0;
 // costanti
 
 var lessIngredients;
@@ -11,7 +12,6 @@ var listeIngredienti = document.getElementsByClassName('liste')[0].getElementsBy
 var cupon = document.getElementById('cupon');
 var go = document.getElementsByTagName('button')[0];
 var total =document.getElementById('prezzo-finale');
-var totaleSelezionato = 0;
 go.addEventListener('click',function() {
 // ----------------------------------------------------------------------------------------------------
   // dobbiamo far si che il nome sia obbligatorio,in caso la stinga dell'input sia vuota Alert()
@@ -35,8 +35,8 @@ go.addEventListener('click',function() {
 
     if (flag < 2) {
       alert('scegli almeno due ingredienti,altrimenti non sa di niente!');
+      total.innerText ='0';
       lessIngredients = true;
-      total.innerText ='';
     }else {
       lessIngredients = false;
     }
@@ -46,7 +46,7 @@ go.addEventListener('click',function() {
   var cuponEsistente = false;
   for (var i = 0; i < listaCoupon.length; i++) {
     if (cupon.value === listaCoupon[i]) {
-      cuponEsistente = true
+      cuponEsistente = true;
     }
   }
   // ----------------------------------------------------------------------------------------------------
@@ -61,6 +61,7 @@ go.addEventListener('click',function() {
    paymentButton.style.visibility = 'visible';
    totaleSelezionato = 0;
   });
+  // SEZIONE BONUS
   //creo un pulsante di pagamento
   paymentButton.addEventListener('click',function() {
     alert('Reindirizzamento alla pagina di pagamento in corso');
