@@ -6,6 +6,8 @@ var totaleSelezionato = 0;
 // costanti
 
 var lessIngredients;
+var cart = document.getElementsByClassName('cart')[0];
+var listSelected = document.getElementsByClassName('cart')[0].getElementsByTagName('ul');
 var paymentButton = document.getElementById('payment');
 var nomeHamburger = document.getElementById('nome-hamburger');
 var listeIngredienti = document.getElementsByClassName('liste')[0].getElementsByTagName('input');
@@ -21,12 +23,15 @@ go.addEventListener('click',function() {
   }else if(nomeHamburger.value != ''){
 // ----------------------------------------------------------------------------------------------------
     // dobbiamo far si che l'utente selezioni almeno due ingredienti,attribuire un valore a ogni ingrediente che serviranno poi per la somma del totale
+// TODO: attenzione rimuovere tuttiIngredienti
     var flag = 0;
     var ingredientiSelezionati =[];
+    var tuttiIngredienti =[];
     for (var i = 0; i < listeIngredienti.length; i++) {
       if (listeIngredienti[i].checked === true) {
         flag += 1;
         ingredientiSelezionati.push(parseInt(listeIngredienti[i].value));
+        tuttiIngredienti.push(listeIngredienti[i].name);
       }
     }
     for (var i = 0; i < ingredientiSelezionati.length; i++) {
@@ -59,9 +64,11 @@ go.addEventListener('click',function() {
      total.innerText = prezzoBase + totaleSelezionato - sconto;
    }
    paymentButton.style.visibility = 'visible';
+   cart.style.visibility = 'visible';
    totaleSelezionato = 0;
   });
   // SEZIONE BONUS
+
   //creo un pulsante di pagamento
   paymentButton.addEventListener('click',function() {
     alert('Reindirizzamento alla pagina di pagamento in corso');
