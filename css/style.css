@@ -56,7 +56,6 @@ header img{
   border-radius: 50%;
   padding: 20px;
   background-color: #FDBB40;
-  transform: rotate(-45deg);
 }
 h2{
   font-size: 1.8em;
@@ -99,19 +98,7 @@ li{
   margin-right: 10px;
 }
 .img-cont img{
-  height: 45px;
-}
-.lista-uno li:first-child .img-cont,.lista-uno li:nth-child(2) .img-cont,.lista-due li:nth-child(2) .img-cont{
-  background-color:#D33359;
-}
-.lista-uno li:last-child .img-cont{
-  background-color: #B16E60;
-}
-.lista-due li:first-child .img-cont{
-  background-color: #94F3FF;
-}
-.lista-due li:last-child .img-cont{
-  background-color: #EAA7F4;
+  height: 100%;
 }
 .checkmark {
   position: absolute;
