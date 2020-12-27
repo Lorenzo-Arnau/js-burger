@@ -8,13 +8,17 @@ var costo = document.getElementById('prezzo-finale');
 
 paymentComplete.addEventListener('click',function(){
   if (creditCard.value === '' || creditCard.value.length !== 16 ||  isNaN(parseInt(creditCard.value))) {
-    alert('è necessario inserire una carta valida per proseguire nel pagamento')
+    alert('it is necessary to insert a valid card to continue the payment')
   }else{
-
     if (nome.value === '' || cognome.value === '' || indirizzo.value === '') {
-      alert('compila ogni campo per procedere al pagamento')
+      alert('fill in each field to proceed with the payment')
     }else {
-      alert('Pagamento in corso...Grazie '+ nome.value +' '+ cognome.value +'! i tuoi prodotti verranno spediti a questo indirizzo '+ indirizzo.value +' al più presto! reinderizzamento alla schermata principale,grazie per aver acquistato da noi! alla prossima!')
+      // parte riservata al backend,per i dati del pagamento da inviare al server
+      console.log(creditCard.value);
+      console.log(nome.value);
+      console.log(cognome.value);
+        // parte riservata al backend,per i dati del pagamento da inviare al server
+      alert('Payment in progress ... Thanks '+ nome.value +' '+ cognome.value +'! your products will be shipped to this address '+ indirizzo.value +' as soon as possible! redirect to the main screen, thanks for purchasing from us! see you next time! All Your Burger Staff')
       location.href = "../index.html";
     }
 

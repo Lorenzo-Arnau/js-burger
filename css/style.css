@@ -8,7 +8,6 @@
 .container{
   width: 100%;
   height: 100%;
-  min-width: 1200px;
   margin: 0 auto;
   position: relative;
   background-color: #FFF5E2;
@@ -37,16 +36,15 @@ header{
   position: relative;
   height: 100px;
 }
-/* TODO: ristabilire il main */
+
 main{
   background-color: #fff;
-  min-height: calc(100vh - 200px);
-
+  height: calc(100vh - 200px);
 }
 header h1,.input-nome,.lista-uno,.lista-due,footer div{
   padding: 30px 15px 20px 25px;
 }
-header .fr{
+header .imgburger{
   position: absolute;
   right: -50px;
   top: -10px;
@@ -87,24 +85,11 @@ li{
 }
 .liste{
   width: 100%;
-  height: 200px;
   justify-content: space-around;
 }
-.img-cont{
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  padding: 5px;
-  vertical-align: middle;
-  text-align: center;
-  display: inline-block;
-  margin-right: 10px;
-}
-.img-cont img{
-  height: 100%;
+.lista-uno img,.lista-due img{
   vertical-align: middle;
   height: 60px;
-  width: 60px;
 }
 .checkmark {
   position: absolute;
@@ -190,6 +175,11 @@ button{
   padding: 5px;
   visibility: hidden;
 }
+#refresh{
+  height: 40px;
+  font-size:18px;
+  padding: 5px;
+}
 footer div{
   font-weight: bolder;
   font-size: 30px;
@@ -197,13 +187,83 @@ footer div{
 .cart{
   width: 250px;
   height: 150px;
-  border:1px solid #000;
+  border:2px solid #000;
   position: fixed;
   left: 25%;
-  top: 70%;
+  top: 75%;
+  overflow: auto;
+  border-radius: 10px;
   visibility: hidden;
+  background-color: #fff;
+}
+.cart hr{
+border-color: #D33359;
+margin-bottom: 5px;
 }
 .cart ul li{
 font-size: 15px;
 margin-top: 1px;
+font-weight: bold;
+margin-left: 10px;
 }
+  /* MEdia query */
+  @media (max-width: 1373px){
+
+    header,main,footer{
+      width: 70%;
+      margin:auto;
+    }
+    main{
+      height: 100vh;
+    }
+    .lista-uno img,.lista-due img{
+      height:35px;
+    }
+    .cart{
+      transform: scale(0.8);
+      left:12%;
+    }
+  }
+  @media (max-width: 992px) {
+    .liste{
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .lista-uno,.lista-due{
+    width: 100%;
+    }
+  }
+  @media (max-width: 576px) {
+    header,main,footer{
+      width: 100%;
+    }
+    header .imgburger{
+    display: none;
+    }
+    .input-nome input {
+      width:200px;
+      font-size: 20px;
+    }
+    .cupon-input{
+      margin-top:30px;
+    }
+     .cupon-input input{
+      width:150px;
+      height: 30px;
+    }
+    header h1,.input-nome,.lista-uno,.lista-due{
+      padding: 0px 15px 0px 25px;
+    }
+    .cart{
+      transform: scale(0.7);
+      left: -10%;
+      top: 80%;
+    }
+    #payment{
+      height: auto;
+      width: 80px;
+    }
+    footer div{
+      padding: 0px 0px 20px 0px;
+    }
+  }

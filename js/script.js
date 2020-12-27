@@ -1,11 +1,12 @@
 // costanti
 var prezzoBase=50;
 var scontoPrecentuale=20;
-var listaCoupon = ['MARTEDI20','LUNEDI20','MERCOLEDI20'];
+var listaCoupon = ['THURSDAY20','MONDAY20','WEDNESDAY20'];
 var totaleSelezionato = 0;
 // costanti
 
 var lessIngredients;
+var refreshCart = document.getElementById('refresh');
 var cart = document.getElementsByClassName('cart')[0];
 var ingredients = document.getElementsByClassName('cart')[0].getElementsByTagName('ul')[0];
 var listSelected = document.getElementsByClassName('cart')[0].getElementsByTagName('ul');
@@ -19,7 +20,7 @@ go.addEventListener('click',function() {
 // ----------------------------------------------------------------------------------------------------
   // dobbiamo far si che il nome sia obbligatorio,in caso la stinga dell'input sia vuota Alert()
   if (nomeHamburger.value == '') {
-    alert('Inserisci un nome per il tuo Hamburger')
+    alert('Enter a name for your Hamburger')
     total.innerText ='0';
   }else if(nomeHamburger.value != ''){
 // ----------------------------------------------------------------------------------------------------
@@ -40,7 +41,7 @@ go.addEventListener('click',function() {
     }
 
     if (flag < 2) {
-      alert('scegli almeno due ingredienti,altrimenti non sa di niente!');
+      alert('choose at least two ingredients, otherwise it tastes nothing!');
       total.innerText ='0';
       lessIngredients = true;
     }else {
@@ -65,18 +66,29 @@ go.addEventListener('click',function() {
      total.innerText = prezzoBase + totaleSelezionato - sconto;
    }
 // TODO: far funzionare carrello--------------------------------------------------------------
-   // // for (var i = 0; i < tuttiIngredienti.length; i++) {
-   // //  ingredients.innerHTML += '<li>'+'x1'+tuttiIngredienti[i]+'</li>'
-   // // }
-   // cart.style.visibility = 'visible';
-   // ---------------------------------------------------------------------------------------------
+    ingredients.innerHTML = '<li>'+'BREAD'+'</li>';
+    ingredients.innerHTML += '<li>'+'MEAT'+'</li>';
+   for (var i = 0; i < tuttiIngredienti.length; i++) {
+    ingredients.innerHTML += '<li>'+tuttiIngredienti[i].toUpperCase()+'</li>'
+   }
+   tuttiIngredienti=[];
+   cart.style.visibility = 'visible';
+//    ---------------------------------------------------------------------------------------------
    paymentButton.style.visibility = 'visible';
    totaleSelezionato = 0;
  });
   // SEZIONE BONUS
-
+  refreshCart.addEventListener('click',function() {
+    ingredients.innerHTML = '<li>'+'BREAD'+'</li>';
+    ingredients.innerHTML += '<li>'+'MEAT'+'</li>';
+    total.innerText = '0';
+  });
   //creo un pulsante di pagamento
   paymentButton.addEventListener('click',function() {
-    alert('Reindirizzamento alla pagina di pagamento in corso');
+    if (total.innerText === '0') {
+      alert('Attention, it is not possible to continue the purchase because the total is 0 dollars')
+    }else{
+    alert('Redirect to the payment page in progress');
     location.href = "payment/payment.html";
+  }
   });
