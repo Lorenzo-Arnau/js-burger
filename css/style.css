@@ -11,6 +11,7 @@
   margin: 0 auto;
   position: relative;
   background-color: #FFF5E2;
+  opacity: 0;
 }
 .fl{
   float: left;

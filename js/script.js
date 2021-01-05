@@ -5,6 +5,7 @@ var listaCoupon = ['THURSDAY20','MONDAY20','WEDNESDAY20'];
 var totaleSelezionato = 0;
 // costanti
 
+var allPage = document.getElementsByClassName('container')[0];
 var lessIngredients;
 var refreshCart = document.getElementById('refresh');
 var cart = document.getElementsByClassName('cart')[0];
@@ -65,7 +66,7 @@ go.addEventListener('click',function() {
      sconto = ((prezzoBase + totaleSelezionato) * scontoPrecentuale) / 100;
      total.innerText = prezzoBase + totaleSelezionato - sconto;
    }
-// TODO: far funzionare carrello--------------------------------------------------------------
+// --------------------------------------------------------------
     ingredients.innerHTML = '<li>'+'BREAD'+'</li>';
     ingredients.innerHTML += '<li>'+'MEAT'+'</li>';
    for (var i = 0; i < tuttiIngredienti.length; i++) {
@@ -91,4 +92,10 @@ go.addEventListener('click',function() {
     alert('Redirect to the payment page in progress');
     location.href = "payment/payment.html";
   }
+  });
+
+  // Inserisco un evento al caricamento della pagina, in modo che si possa inserire uno splash screen in un secondo momento
+  document.addEventListener("DOMContentLoaded", function() {
+   allPage.style.opacity = 1;
+   console.log('pagina caricata correttamente');
   });
